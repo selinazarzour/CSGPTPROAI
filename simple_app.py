@@ -16,7 +16,7 @@ st.image(logo_path, use_column_width=True)
 # Init image to text model
 model = LatexOCR()
 
-replicate_api = 1
+replicate_api = "r8_YKpM3UBNeDxUjwRhNrdOcnTApcPundN2qAYJP"
 
 client = OpenAI(
     base_url="https://integrate.api.nvidia.com/v1",
@@ -108,7 +108,7 @@ with st.sidebar:
     #         st.warning('Please enter your Replicate API token.', icon='⚠️')
     #         st.markdown("**Don't have an API token?** Head over to [Replicate](https://replicate.com) to sign up for one.")
 
-    # os.environ['REPLICATE_API_TOKEN'] = replicate_api
+    os.environ['REPLICATE_API_TOKEN'] = replicate_api
     st.subheader("Adjust model parameters")
     temperature = st.sidebar.slider('temperature', min_value=0.01, max_value=5.0, value=0.3, step=0.01)
     top_p = st.sidebar.slider('top_p', min_value=0.01, max_value=1.0, value=0.9, step=0.01)

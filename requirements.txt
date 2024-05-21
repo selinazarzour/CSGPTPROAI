@@ -1,0 +1,6 @@
+streamlit
+replicate
+transformers
+scikit-learn
+openai
+pix2tex
